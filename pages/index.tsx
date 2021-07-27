@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { pagesPath } from "../lib/$path";
+import Image from "next/image";
+import { pagesPath, staticPath } from "../lib/$path";
 
 export default function Home() {
   return (
@@ -8,6 +9,14 @@ export default function Home() {
       <Link href={pagesPath._id(10).$url()}>
         <a>10</a>
       </Link>
+      <div>
+        <Image
+          src={staticPath.vercel_svg}
+          alt="vercel"
+          width="283"
+          height="64"
+        />
+      </div>
     </>
   );
 }
